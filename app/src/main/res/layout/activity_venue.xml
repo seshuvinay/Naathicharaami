@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/postal_address"
+        android:layout_width="wrap_content"
+        android:text="Kutchi Bhavan,\n3-5-141/2/A/1,\nRamkoti,\nHyderabad-500001"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/map_img"
+        android:layout_below="@id/postal_address"
+        android:layout_width="wrap_content"
+        android:src="@drawable/map"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/navigate_btn"
+        android:layout_below="@id/map_img"
+        android:text="Navigate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/uber_btn"
+        android:layout_below="@id/navigate_btn"
+        android:text="Uber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/ola_btn"
+        android:layout_below="@id/uber_btn"
+        android:text="OLA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
