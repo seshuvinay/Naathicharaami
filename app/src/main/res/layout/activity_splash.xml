@@ -15,13 +15,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:gravity="end"
         android:layout_marginBottom="30dp">
 
         <com.whinc.widget.fontview.FontTextView
             android:id="@+id/title_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:text="Naathicharaami"
             android:textColor="#ff0000"
             android:textSize="40sp"
@@ -32,10 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/title_tv"
-            android:layout_alignParentEnd="true"
-
             android:text="The promise!"
-
             android:textColor="#ff0000"
             android:textSize="24sp" />
 
