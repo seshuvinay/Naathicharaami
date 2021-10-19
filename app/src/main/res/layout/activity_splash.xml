@@ -8,44 +8,56 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/splash_bg" />
+        android:src="@drawable/splash_bg"
+        android:alpha="0.8"/>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AEFFFF00" />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true">
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/hearts_view"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/love_hearts" />
     <RelativeLayout
         android:id="@+id/text_layout"
+        android:layout_below="@id/hearts_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="end"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp">
 
         <com.whinc.widget.fontview.FontTextView
             android:id="@+id/title_tv"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Naathicharaami"
             android:textColor="#ff0000"
             android:textSize="40sp"
+            android:gravity="center"
             android:textStyle="bold|italic"
             app:font_path="fonts/samarkan.ttf" />
 
-        <TextView
+        <com.whinc.widget.fontview.FontTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/title_tv"
+            android:layout_alignEnd="@id/title_tv"
+            android:layout_marginEnd="70dp"
+            android:layout_marginTop="-10dp"
             android:text="The promise!"
+            app:font_path="fonts/bellos.ttf"
             android:textColor="#ff0000"
             android:textSize="24sp" />
 
     </RelativeLayout>
-
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/hearts_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/text_layout"
-        android:layout_centerHorizontal="true"
-        app:lottie_autoPlay="false"
-        app:lottie_loop="false"
-        app:lottie_rawRes="@raw/love_hearts" />
+</RelativeLayout>
 
 </RelativeLayout>
