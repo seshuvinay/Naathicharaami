@@ -4,45 +4,130 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <com.whinc.widget.fontview.FontTextView
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Let us follow safety tips and keep away from Covid-19" />
-
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/no_shake_hands"
-        android:layout_width="wrap_content"
+        android:text="Let us follow safety tips and keep away from Covid-19"
+        android:textColor="#333"
+        android:textSize="18sp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:font_path="fonts/bellos.ttf"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"/>
+<LinearLayout
+    android:layout_below="@id/title"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/covid_block1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/title"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/no_shaking_hands" />
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        android:weightSum="2">
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/say_namaste"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/no_shake_hands"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/namaste" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/no_shake_hands"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                android:padding="15dp"
+                app:lottie_rawRes="@raw/no_shaking_hands" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Shake Hands"
+                android:textColor="#000"
+                android:textSize="16sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/wear_masks"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/say_namaste"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/wear_mask" />
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/sanitize_hands"
-        android:layout_width="wrap_content"
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/say_namaste"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:padding="15dp"
+            app:lottie_rawRes="@raw/namaste" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Say Namaste"
+                android:textColor="#000"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/covid_block2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/wear_masks"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/sanitize_hands" />
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        android:weightSum="2">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/wear_masks"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:padding="15dp"
+            app:lottie_rawRes="@raw/wear_mask" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wear Masks"
+                android:textColor="#000"
+                android:textSize="16sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/sanitize_hands"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            app:lottie_autoPlay="true"
+            android:padding="15dp"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/sanitize_hands" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sanitize Hands"
+                android:textColor="#000"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+
 </RelativeLayout>

@@ -50,12 +50,12 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/title_tv"
             android:layout_alignEnd="@id/title_tv"
-            android:layout_marginEnd="70dp"
             android:layout_marginTop="-10dp"
+            android:layout_marginEnd="70dp"
             android:text="The promise!"
-            app:font_path="fonts/bellos.ttf"
             android:textColor="#ff0000"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            app:font_path="fonts/bellos.ttf" />
 
     </RelativeLayout>
 </RelativeLayout>
