@@ -58,15 +58,50 @@ public class ContactsActivity extends AppCompatActivity implements ActivityCompa
         map0.put("image",getResources().getDrawable(R.drawable.sneha));
 
         contactsArray.add(map0);
+        HashMap<String,Object> map1=new HashMap<>();
+        map1.put("name","The Groom");
+        map1.put("mobile","9652202839");
+        map1.put("image",getResources().getDrawable(R.drawable.rohit));
 
+        contactsArray.add(map1);
+        HashMap<String,Object> map2=new HashMap<>();
+        map2.put("name","Mr. Parthasaradhi");
+        map2.put("mobile","9951032758");
+        map2.put("image",getResources().getDrawable(R.drawable.sarathi));
 
+        contactsArray.add(map2);
+        HashMap<String,Object> map3=new HashMap<>();
+        map3.put("name","Smt. Devika");
+        map3.put("mobile","9014272269");
+        map3.put("image",getResources().getDrawable(R.drawable.devika));
+
+        contactsArray.add(map3);
+        HashMap<String,Object> map4=new HashMap<>();
+        map4.put("name","Dr. Soumya");
+        map4.put("mobile","7382191375");
+        map4.put("image",getResources().getDrawable(R.drawable.soumya));
+
+        contactsArray.add(map4);
+        HashMap<String,Object> map5=new HashMap<>();
+        map5.put("name","Mr. Ravi kumar joshi");
+        map5.put("mobile","");
+        map5.put("image",getResources().getDrawable(R.drawable.ravi));
+
+        contactsArray.add(map5);
 
         HashMap<String,Object> map6=new HashMap<>();
-        map6.put("name","Mr. Seshu Vinay");
-        map6.put("mobile","9010600027");
-        map6.put("image",getResources().getDrawable(R.drawable.vinay));
+        map6.put("name","Smt. Renuka");
+        map6.put("mobile","8125814190");
+        map6.put("image",getResources().getDrawable(R.drawable.renuka));
 
         contactsArray.add(map6);
+
+        HashMap<String,Object> map7=new HashMap<>();
+        map7.put("name","Mr. Seshu Vinay");
+        map7.put("mobile","9010600027");
+        map7.put("image",getResources().getDrawable(R.drawable.vinay));
+
+        contactsArray.add(map7);
 
 
 
