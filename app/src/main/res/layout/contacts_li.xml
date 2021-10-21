@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/contact_root"
     android:paddingTop="6dp"
     android:paddingBottom="6dp">
@@ -22,4 +23,23 @@
         android:textSize="16sp"
         android:textStyle="bold"
         android:layout_toEndOf="@id/contact_img" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/whatsapp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/whatsapp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/whatsapp"
+            app:srcCompat="@drawable/call" />
+    </RelativeLayout>
 </RelativeLayout>
