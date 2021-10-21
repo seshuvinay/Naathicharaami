@@ -3,20 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg1"
+        android:alpha="0.5 "/>
 
     <com.whinc.widget.fontview.FontTextView
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Let us follow safety tips and keep away from Covid-19"
-        android:textColor="#333"
-        android:textSize="18sp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:gravity="center"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
-        app:font_path="fonts/bellos.ttf"
-        android:gravity="center"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="25dp"/>
+        android:text="Let us follow safety tips and keep away from Covid-19"
+
+        android:textColor="#6100A6"
+        android:textSize="18sp"
+        app:font_path="fonts/bellos.ttf" />
 <LinearLayout
     android:layout_below="@id/title"
     android:layout_width="match_parent"
@@ -44,11 +50,12 @@
                 app:lottie_loop="true"
                 android:padding="15dp"
                 app:lottie_rawRes="@raw/no_shaking_hands" />
-            <TextView
+            <com.whinc.widget.fontview.FontTextView
+                app:font_path="fonts/bellos.ttf"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="No Shake Hands"
-                android:textColor="#000"
+                android:textColor="#6100A6"
                 android:textSize="16sp"/>
         </LinearLayout>
         <LinearLayout
@@ -67,11 +74,12 @@
             app:lottie_loop="true"
             android:padding="15dp"
             app:lottie_rawRes="@raw/namaste" />
-            <TextView
+            <com.whinc.widget.fontview.FontTextView
+                app:font_path="fonts/bellos.ttf"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Say Namaste"
-                android:textColor="#000"
+                android:textColor="#6100A6"
                 android:textSize="16sp"/>
         </LinearLayout>
     </LinearLayout>
@@ -98,11 +106,12 @@
             app:lottie_loop="true"
             android:padding="15dp"
             app:lottie_rawRes="@raw/wear_mask" />
-            <TextView
+            <com.whinc.widget.fontview.FontTextView
+                app:font_path="fonts/bellos.ttf"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Wear Masks"
-                android:textColor="#000"
+                android:textColor="#6100A6"
                 android:textSize="16sp"/>
         </LinearLayout>
         <LinearLayout
@@ -119,11 +128,12 @@
             android:padding="15dp"
             app:lottie_loop="true"
             app:lottie_rawRes="@raw/sanitize_hands" />
-            <TextView
+            <com.whinc.widget.fontview.FontTextView
+                app:font_path="fonts/bellos.ttf"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sanitize Hands"
-                android:textColor="#000"
+                android:textColor="#6100A6"
                 android:textSize="16sp"/>
         </LinearLayout>
     </LinearLayout>
