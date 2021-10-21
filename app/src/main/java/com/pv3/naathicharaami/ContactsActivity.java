@@ -116,23 +116,8 @@ public class ContactsActivity extends AppCompatActivity implements ActivityCompa
 
     }
 
-    public void onClick(final String mobile, View anchorView) {
-        try {
-            String[] array={"Call","Whatsapp"};
-            final ListPopupWindow popupWindow = new ListPopupWindow(ContactsActivity.this);
-            popupWindow.setAdapter(new ArrayAdapter<>(
-                    ContactsActivity.this,
-                    android.R.layout.simple_spinner_dropdown_item, array));
-            popupWindow.setAnchorView(anchorView);
-            popupWindow.setWidth(ListPopupWindow.WRAP_CONTENT);
-            popupWindow.setHeight(ListPopupWindow.WRAP_CONTENT);
-
-            popupWindow.setModal(true);
-            popupWindow.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    if(position==0){
-                        if((ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE)== PackageManager.PERMISSION_GRANTED)){
+    public void call(final String mobile){
+        if((ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE)== PackageManager.PERMISSION_GRANTED)){
                             startActivity(new
                                     Intent("android.intent.action.CALL", Uri.parse("tel:" + mobile)));
                         }else{
@@ -141,21 +126,7 @@ public class ContactsActivity extends AppCompatActivity implements ActivityCompa
                                     new String[]{Manifest.permission.CALL_PHONE},
                                     0);
                         }
-
-                    }else{
-                        String url="https://wa.me/91"+mobile;
-                        startActivity(new Intent(
-                                Intent.ACTION_VIEW,
-                                Uri.parse(url))); startActivity(new Intent(
-                                Intent.ACTION_VIEW,
-                                Uri.parse(url)));
-                    }
-
-                    popupWindow.dismiss();
-                }
-            });
-            popupWindow.show();
-        } catch (Exception ignored) {
-        }
     }
+    
+   
 }
