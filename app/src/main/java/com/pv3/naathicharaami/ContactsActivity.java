@@ -32,7 +32,7 @@ public class ContactsActivity extends AppCompatActivity implements ActivityCompa
 
         if (requestCode == 0) {
 
-            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            if (grantResults.length == 1 &&grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
                 startActivity(new
                         Intent("android.intent.action.CALL", Uri.parse("tel:" + mobile)));
