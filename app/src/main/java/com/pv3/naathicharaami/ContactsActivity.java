@@ -106,7 +106,7 @@ public class ContactsActivity extends AppCompatActivity implements ActivityCompa
         HashMap<String,Object> map8=new HashMap<>();
         map8.put("name","Mr. Bhimsen Joshi");
         map8.put("mobile","9963528105");
-        map8.put("image",getResources().getDrawable(R.drawable.vinay));
+        map8.put("image",getResources().getDrawable(R.drawable.bhim));
 
         contactsArray.add(map8);
 
