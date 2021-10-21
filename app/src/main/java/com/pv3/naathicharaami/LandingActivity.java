@@ -7,6 +7,7 @@ import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,19 +44,23 @@ public class LandingActivity extends AppCompatActivity {
         findViewById(R.id.calendar_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-try{Calendar beginTime = Calendar.getInstance();
-            beginTime.set(2021,10,10,8,0,0);
-            beginTime.setTimeZone(TimeZone.getTimeZone("Asia/Calcutta"));
+                try {
+                    Calendar beginTime = Calendar.getInstance();
+                    beginTime.set(2021,10,10,8,0,0);
+                    beginTime.setTimeZone(TimeZone.getTimeZone("Asia/Calcutta"));
 
-            Calendar endTime = Calendar.getInstance();
-            endTime.set(2021,10,10,13,0,0);
-            endTime.setTimeZone(TimeZone.getTimeZone("Asia/Calcutta"));
-              startActivity(new
-                      Intent("android.intent.action.INSERT").setData(Uri.parse("content://com.android.calendar/events")).putExtra("beginTime",
-                        beginTime.getTimeInMillis()).putExtra("endTime",
-                        endTime.getTimeInMillis()).putExtra("title", "Naathicharaami-The promise!").putExtra("description", "Sneha weds Rohith").putExtra("eventLocation", "Kutchi Bhavan, Ramakoti, Hyderabad").putExtra("availability", 0));
-            }}catch(Exception e){
-            Toast.makeText(LandingActivity.this,"Google calendar not ready.",Toast.LENGTH_LONG).show();
+                    Calendar endTime = Calendar.getInstance();
+                    endTime.set(2021,10,10,13,0,0);
+                    endTime.setTimeZone(TimeZone.getTimeZone("Asia/Calcutta"));
+                    startActivity(new
+                            Intent("android.intent.action.INSERT").setData(Uri.parse("content://com.android.calendar/events")).putExtra("beginTime",
+                            beginTime.getTimeInMillis()).putExtra("endTime",
+                            endTime.getTimeInMillis()).putExtra("title", "Naathicharaami-The promise!").putExtra("description", "Sneha weds Rohith").putExtra("eventLocation", "Kutchi Bhavan, Ramakoti, Hyderabad").putExtra("availability", 0));
+
+                } catch (Exception e) {
+
+                    Toast.makeText(LandingActivity.this, "Google calendar not ready.", Toast.LENGTH_LONG).show();
+                }
             }
         });
         findViewById(R.id.covid_btn).setOnClickListener(new View.OnClickListener() {

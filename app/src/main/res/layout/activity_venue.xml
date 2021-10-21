@@ -2,12 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg1"
+        android:alpha="0.5 "/>
     <TextView
         android:id="@+id/postal_address"
         android:layout_width="wrap_content"
         android:text="Kutchi Bhavan,\n3-5-141/2/A/1,\nRamkoti,\nHyderabad-500001"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textSize="18dp"/>
 
     <ImageView
         android:id="@+id/map_img"
