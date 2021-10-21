@@ -43,7 +43,7 @@ public class LandingActivity extends AppCompatActivity {
         findViewById(R.id.calendar_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-Calendar beginTime = Calendar.getInstance();
+try{Calendar beginTime = Calendar.getInstance();
             beginTime.set(2021,10,10,8,0,0);
             beginTime.setTimeZone(TimeZone.getTimeZone("Asia/Calcutta"));
 
@@ -54,6 +54,8 @@ Calendar beginTime = Calendar.getInstance();
                       Intent("android.intent.action.INSERT").setData(Uri.parse("content://com.android.calendar/events")).putExtra("beginTime",
                         beginTime.getTimeInMillis()).putExtra("endTime",
                         endTime.getTimeInMillis()).putExtra("title", "Naathicharaami-The promise!").putExtra("description", "Sneha weds Rohith").putExtra("eventLocation", "Kutchi Bhavan, Ramakoti, Hyderabad").putExtra("availability", 0));
+            }}catch(Exception e){
+            Toast.makeText(LandingActivity.this,"Google calendar not ready.",Toast.LENGTH_LONG).show();
             }
         });
         findViewById(R.id.covid_btn).setOnClickListener(new View.OnClickListener() {
