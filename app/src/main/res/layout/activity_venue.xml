@@ -27,11 +27,12 @@
         android:layout_below="@id/title"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:letterSpacing="0.1"
         android:paddingStart="15dp"
         android:paddingEnd="15dp"
         android:text="Kutchi Bhavan,\n3-5-141/2/A/1,\nRamkoti,\nHyderabad-500001"
         android:textColor="#6100a6"
-        android:letterSpacing="0.1"
         android:textSize="20sp"
         app:font_path="fonts/bellos.ttf" />
 
@@ -43,7 +44,7 @@
 
         <ImageView
             android:id="@+id/map_img"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
@@ -52,34 +53,33 @@
             android:src="@drawable/map" />
 
 
-        <com.whinc.widget.fontview.FontTextView
-            android:id="@+id/navigate_btn"
-            android:layout_toStartOf="@id/map_img"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:drawableTop="@drawable/gmaps"
-            android:drawablePadding="5dp"
-            android:gravity="center"
-            android:text="Navigate"
-            android:textColor="#6100a6"
-            android:textSize="16sp"
-            app:font_path="fonts/bellos.ttf" />
+
     </RelativeLayout>
 
 
-    <Button
-        android:id="@+id/uber_btn"
+    <ImageView
+        android:id="@+id/navigate_btn"
         android:layout_below="@id/maps"
-        android:text="Uber"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:src="@drawable/gmaps"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+    <ImageView
+        android:id="@+id/uber_btn"
+        android:layout_below="@id/navigate_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/uber"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
 
-    <Button
+    <ImageView
         android:id="@+id/ola_btn"
         android:layout_below="@id/uber_btn"
-        android:text="OLA"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
+        android:layout_height="wrap_content"
+        android:src="@drawable/ola"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
