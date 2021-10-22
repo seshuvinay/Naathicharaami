@@ -83,7 +83,7 @@ public class ContactsActivity extends AppCompatActivity implements ActivityCompa
 
         contactsArray.add(map4);
         HashMap<String,Object> map5=new HashMap<>();
-        map5.put("name","Mr. Ravi kumar joshi");
+        map5.put("name","Mr. Ravi Kumar Joshi");
         map5.put("mobile","8125814190");
         map5.put("image",getResources().getDrawable(R.drawable.ravi));
 
