@@ -50,7 +50,7 @@ public class LandingActivity extends AppCompatActivity {
                     beginTime.setTimeZone(TimeZone.getTimeZone("Asia/Calcutta"));
 
                     Calendar endTime = Calendar.getInstance();
-                    endTime.set(2021,10,10,13,0,0);
+                    endTime.set(2021,10,10,14,0,0);
                     endTime.setTimeZone(TimeZone.getTimeZone("Asia/Calcutta"));
                     startActivity(new
                             Intent("android.intent.action.INSERT").setData(Uri.parse("content://com.android.calendar/events")).putExtra("beginTime",
