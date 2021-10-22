@@ -40,15 +40,16 @@
         android:layout_below="@id/postal_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <ImageView
             android:id="@+id/map_img"
             android:layout_width="wrap_content"
-            android:src="@drawable/map"
-            android:paddingStart="15dp"
-            android:layout_centerVertical="true"
-            android:paddingEnd="15dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_height="wrap_content" />
+            android:layout_centerVertical="true"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:src="@drawable/map" />
 
 
         <com.whinc.widget.fontview.FontTextView
