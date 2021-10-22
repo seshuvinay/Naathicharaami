@@ -1,35 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/bg1"
         android:alpha="0.5 "/>
-    <TextView
+    <com.whinc.widget.fontview.FontTextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Venue"
+
+        android:textColor="#6100A6"
+        android:textSize="22sp"
+        app:font_path="fonts/bellos.ttf" />
+
+    <com.whinc.widget.fontview.FontTextView
         android:id="@+id/postal_address"
         android:layout_width="wrap_content"
-        android:text="Kutchi Bhavan,\n3-5-141/2/A/1,\nRamkoti,\nHyderabad-500001"
         android:layout_height="wrap_content"
-        android:textSize="18dp"/>
+        android:layout_below="@id/title"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="Kutchi Bhavan,\n3-5-141/2/A/1,\nRamkoti,\nHyderabad-500001"
+        android:textColor="#6100a6"
+        android:letterSpacing="0.1"
+        android:textSize="20sp"
+        app:font_path="fonts/bellos.ttf" />
 
-    <ImageView
-        android:id="@+id/map_img"
+    <RelativeLayout
+        android:id="@+id/maps"
         android:layout_below="@id/postal_address"
-        android:layout_width="wrap_content"
-        android:src="@drawable/map"
-        android:layout_height="wrap_content" />
-    <Button
-        android:id="@+id/navigate_btn"
-        android:layout_below="@id/map_img"
-        android:text="Navigate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/map_img"
+            android:layout_width="wrap_content"
+            android:src="@drawable/map"
+            android:paddingStart="15dp"
+            android:layout_centerVertical="true"
+            android:paddingEnd="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_height="wrap_content" />
+
+
+        <com.whinc.widget.fontview.FontTextView
+            android:id="@+id/navigate_btn"
+            android:layout_toStartOf="@id/map_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableTop="@drawable/gmaps"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="Navigate"
+            android:textColor="#6100a6"
+            android:textSize="16sp"
+            app:font_path="fonts/bellos.ttf" />
+    </RelativeLayout>
+
 
     <Button
         android:id="@+id/uber_btn"
-        android:layout_below="@id/navigate_btn"
+        android:layout_below="@id/maps"
         android:text="Uber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

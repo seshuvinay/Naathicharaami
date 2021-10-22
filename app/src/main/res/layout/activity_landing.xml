@@ -2,65 +2,173 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp">
-
-    <TextView
-        android:id="@+id/timer_pretext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/timer_txt"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/timer_pretext" />
+        android:background="@drawable/bg1"
+        android:alpha="0.5 "/>
 
-    <TextView
-        android:id="@+id/muhurtham_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/timer_txt"
-        android:text="Muhurtham:\n Nov 10th 2021 \n at 10:29 AM" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
 
-    <Button
+        <com.whinc.widget.fontview.FontTextView
+            android:id="@+id/timer_pretext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:textColor="#6100a6"
+            android:textSize="22sp"
+            app:font_path="fonts/bellos.ttf" />
+
+        <com.whinc.widget.fontview.FontTextView
+            android:id="@+id/timer_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timer_pretext"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textColor="#6100a6"
+            android:textSize="36sp"
+            app:font_path="fonts/bellos.ttf" />
+
+        <RelativeLayout
+            android:id="@+id/muhurth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timer_txt"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/wedding_frame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/wd_frame" />
+
+            <com.whinc.widget.fontview.FontTextView
+                android:id="@+id/calendar_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wedding_frame"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:drawableEnd="@drawable/calendar2"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="Muhurtham:\n Nov 10th 2021 \n at 10:29 am"
+                android:textColor="#6100a6"
+                android:textSize="30sp"
+                app:font_path="fonts/bellos.ttf" />
+        </RelativeLayout>
+        <!--    <Button
         android:id="@+id/calendar_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/muhurtham_txt"
-        android:text="Calendar" />
+        android:text="Calendar" />-->
 
-    <Button
-        android:id="@+id/location_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/calendar_btn"
-        android:text="Venue" />
+        <LinearLayout
+            android:id="@+id/icons_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/muhurth"
+            android:layout_marginTop="60dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="4">
 
-    <Button
-        android:id="@+id/contacts_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/location_btn"
-        android:text="Contacts" />
+            <com.whinc.widget.fontview.FontTextView
+                android:id="@+id/location_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/venue"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="Venue"
+                android:textColor="#6100a6"
+                android:textSize="16sp"
+                app:font_path="fonts/bellos.ttf" />
 
-    <Button
-        android:id="@+id/share_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/contacts_btn"
-        android:text="Share" />
+            <com.whinc.widget.fontview.FontTextView
+                android:id="@+id/contacts_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/contacts"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="Contacts"
+                android:textColor="#6100a6"
+                android:textSize="16sp"
+                app:font_path="fonts/bellos.ttf" />
 
-    <Button
-        android:id="@+id/rating_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/share_btn"
-        android:text="Rate us" />
+            <com.whinc.widget.fontview.FontTextView
+                android:id="@+id/share_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contacts_btn"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/share"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="Share"
+                android:textColor="#6100a6"
+                android:textSize="16sp"
+                app:font_path="fonts/bellos.ttf" />
 
-    <Button
-        android:id="@+id/covid_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/rating_btn"
-        android:text="Covid" />
+            <com.whinc.widget.fontview.FontTextView
+                android:id="@+id/rating_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/share_btn"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/rate"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="Rate us"
+                android:textColor="#6100a6"
+                android:textSize="16sp"
+                app:font_path="fonts/bellos.ttf" />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/covid_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/covid_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/coronavirus" />
+
+            <com.whinc.widget.fontview.FontTextView
+                android:id="@+id/covid_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/covid_icon"
+                android:drawableEnd="@drawable/right_arrow"
+                android:drawablePadding="10dp"
+                android:text="Stay distant! Stay safe!!"
+                android:textColor="#6100A6"
+                android:textSize="22sp"
+                app:font_path="fonts/bellos.ttf" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
 </RelativeLayout>
