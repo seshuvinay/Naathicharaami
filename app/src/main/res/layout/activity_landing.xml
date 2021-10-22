@@ -131,7 +131,7 @@
                 android:drawableTop="@drawable/rate"
                 android:drawablePadding="5dp"
                 android:gravity="center"
-                android:text="Rate us"
+                android:text="Greet us!"
                 android:textColor="#6100a6"
                 android:textSize="16sp"
                 app:font_path="fonts/bellos.ttf" />
