@@ -79,7 +79,9 @@ public class LandingActivity extends AppCompatActivity {
                 sendIntent.putExtra("android.intent.extra.TEXT",
                         "Sneha and Rohith are getting tangled, knotted, locked and tied to each other. Be part of their joyous celebration with this amazing app. https://play.google.com/store/apps/details?id=com.pv3.naathicharaami");
                 sendIntent.setType("text/plain");
-                startActivity(sendIntent);
+                Intent shareIntent = Intent.createChooser(sendIntent, "Share with");
+
+                startActivity(shareIntent);
             }
         });
 
