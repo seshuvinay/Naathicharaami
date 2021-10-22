@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.pv3.naathicharaami">
-
+    <queries>
+    <package android:name="com.ubercab" />
+    </queries>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,17 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".SplashScreenActivity">
+        <activity android:name=".SplashScreenActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LandingActivity" />
-        <activity android:name=".VenueActivity" />
-        <activity android:name=".ContactsActivity" />
-        <activity android:name=".CovidActivity" />
+        <activity android:name=".LandingActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".VenueActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ContactsActivity" android:screenOrientation="portrait" />
+        <activity android:name=".CovidActivity" android:screenOrientation="portrait" />
     </application>
 <uses-permission android:name="android.permission.CALL_PHONE" />
 </manifest>

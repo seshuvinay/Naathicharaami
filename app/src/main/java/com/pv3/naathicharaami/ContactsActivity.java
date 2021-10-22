@@ -32,7 +32,7 @@ public class ContactsActivity extends AppCompatActivity implements ActivityCompa
 
         if (requestCode == 0) {
 
-            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            if (grantResults.length == 1 &&grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
                 startActivity(new
                         Intent("android.intent.action.CALL", Uri.parse("tel:" + mobile)));
@@ -58,17 +58,57 @@ public class ContactsActivity extends AppCompatActivity implements ActivityCompa
         map0.put("image",getResources().getDrawable(R.drawable.sneha));
 
         contactsArray.add(map0);
+        HashMap<String,Object> map1=new HashMap<>();
+        map1.put("name","The Groom");
+        map1.put("mobile","9652202839");
+        map1.put("image",getResources().getDrawable(R.drawable.rohit));
 
+        contactsArray.add(map1);
+        HashMap<String,Object> map2=new HashMap<>();
+        map2.put("name","Mr. Pardhasaradhi");
+        map2.put("mobile","9951032758");
+        map2.put("image",getResources().getDrawable(R.drawable.sarathi));
 
+        contactsArray.add(map2);
+        HashMap<String,Object> map3=new HashMap<>();
+        map3.put("name","Smt. Devika");
+        map3.put("mobile","9014272269");
+        map3.put("image",getResources().getDrawable(R.drawable.devika));
+
+        contactsArray.add(map3);
+        HashMap<String,Object> map4=new HashMap<>();
+        map4.put("name","Dr. Soumya");
+        map4.put("mobile","7382191375");
+        map4.put("image",getResources().getDrawable(R.drawable.soumya));
+
+        contactsArray.add(map4);
+        HashMap<String,Object> map5=new HashMap<>();
+        map5.put("name","Mr. Ravi Kumar Joshi");
+        map5.put("mobile","8125814190");
+        map5.put("image",getResources().getDrawable(R.drawable.ravi));
+
+        contactsArray.add(map5);
 
         HashMap<String,Object> map6=new HashMap<>();
-        map6.put("name","Mr. Seshu Vinay");
-        map6.put("mobile","9010600027");
-        map6.put("image",getResources().getDrawable(R.drawable.vinay));
+        map6.put("name","Smt. Renuka");
+        map6.put("mobile","8125814190");
+        map6.put("image",getResources().getDrawable(R.drawable.renuka));
 
         contactsArray.add(map6);
 
+        HashMap<String,Object> map7=new HashMap<>();
+        map7.put("name","Mr. Seshu Vinay");
+        map7.put("mobile","9010600027");
+        map7.put("image",getResources().getDrawable(R.drawable.vinay));
 
+        contactsArray.add(map7);
+
+        HashMap<String,Object> map8=new HashMap<>();
+        map8.put("name","Mr. Bhimsen Joshi");
+        map8.put("mobile","9963528105");
+        map8.put("image",getResources().getDrawable(R.drawable.bhim));
+
+        contactsArray.add(map8);
 
 
 
@@ -76,23 +116,8 @@ public class ContactsActivity extends AppCompatActivity implements ActivityCompa
 
     }
 
-    public void onClick(final String mobile, View anchorView) {
-        try {
-            String[] array={"Call","Whatsapp"};
-            final ListPopupWindow popupWindow = new ListPopupWindow(ContactsActivity.this);
-            popupWindow.setAdapter(new ArrayAdapter<>(
-                    ContactsActivity.this,
-                    android.R.layout.simple_spinner_dropdown_item, array));
-            popupWindow.setAnchorView(anchorView);
-            popupWindow.setWidth(ListPopupWindow.WRAP_CONTENT);
-            popupWindow.setHeight(ListPopupWindow.WRAP_CONTENT);
-
-            popupWindow.setModal(true);
-            popupWindow.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    if(position==0){
-                        if((ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE)== PackageManager.PERMISSION_GRANTED)){
+    public void call(final String mobile){
+        if((ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE)== PackageManager.PERMISSION_GRANTED)){
                             startActivity(new
                                     Intent("android.intent.action.CALL", Uri.parse("tel:" + mobile)));
                         }else{
@@ -101,21 +126,7 @@ public class ContactsActivity extends AppCompatActivity implements ActivityCompa
                                     new String[]{Manifest.permission.CALL_PHONE},
                                     0);
                         }
-
-                    }else{
-                        String url="https://wa.me/91"+mobile;
-                        startActivity(new Intent(
-                                Intent.ACTION_VIEW,
-                                Uri.parse(url))); startActivity(new Intent(
-                                Intent.ACTION_VIEW,
-                                Uri.parse(url)));
-                    }
-
-                    popupWindow.dismiss();
-                }
-            });
-            popupWindow.show();
-        } catch (Exception ignored) {
-        }
     }
+    
+   
 }

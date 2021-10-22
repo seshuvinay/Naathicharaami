@@ -1,13 +1,13 @@
 package com.pv3.naathicharaami;
 
-import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ListAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -48,7 +48,8 @@ public class ContactsAdapter extends BaseAdapter {
             holder.img=convertView.findViewById(R.id.contact_img);
             holder.name=convertView.findViewById(R.id.contact_name);
             holder.root=convertView.findViewById(R.id.contact_root);
-
+            holder.whatsapp=convertView.findViewById(R.id.whatsapp);
+            holder.call=convertView.findViewById(R.id.call);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
@@ -57,10 +58,19 @@ public class ContactsAdapter extends BaseAdapter {
         final HashMap<String,Object> map= (HashMap<String, Object>) getItem(position);
         holder.name.setText(map.get("name").toString());
         holder.img.setImageDrawable((Drawable) map.get("image"));
-        holder.root.setOnClickListener(new View.OnClickListener() {
+        holder.call.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((ContactsActivity)ctx).onClick(map.get("mobile").toString(),holder.root);
+                ((ContactsActivity)ctx).call(map.get("mobile").toString());
+            }
+        });
+        holder.whatsapp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url="https://wa.me/91"+map.get("mobile").toString();
+                        ctx.startActivity(new Intent(
+                                Intent.ACTION_VIEW,
+                                Uri.parse(url)));
             }
         });
 
@@ -72,6 +82,8 @@ public class ContactsAdapter extends BaseAdapter {
         RoundedImageView img;
         TextView name;
         View root;
+        View whatsapp;
+        View call;
     }
 
 }
