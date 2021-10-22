@@ -163,7 +163,7 @@
                 android:layout_toEndOf="@id/covid_icon"
                 android:drawableEnd="@drawable/right_arrow"
                 android:drawablePadding="10dp"
-                android:text="4 promises, we need to follow!!"
+                android:text="4 promises, we need to follow through on!!"
                 android:textColor="#6100A6"
                 android:textSize="22sp"
                 app:font_path="fonts/bellos.ttf" />
